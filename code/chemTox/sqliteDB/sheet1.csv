@@ -1,0 +1,111 @@
+Crop,GrpNo,GrpName,SubGrpNo,SubGrpName,Category
+Alfalfa,18,"animal feed, nongrass",NA,no subgroup,"Field crop, high acreage"
+Barley,15,"grain, cereal",NA,no subgroup,"Field crop, high acreage"
+"Bean, dry, and Pea, dry",6,"vegetable, legume",6C,"pea and bean, dried shelled, except soybean","Field crop, high acreage"
+"Beet, sugar",1,"vegetable, root and tuber",1A,"vegetable, root","Field crop, high acreage"
+Canola,20,oilseed,20A,rapeseed,"Field crop, high acreage"
+"Corn, field",15,"grain, cereal",NA,no subgroup,"Field crop, high acreage"
+"Corn, pop",15,"grain, cereal",NA,no subgroup,"Field crop, high acreage"
+Cotton,20,oilseed,20C,cottonseed,"Field crop, high acreage"
+Forage Crop,18,"animal feed, nongrass",NA,no subgroup,"Field crop, high acreage"
+Mint,19,herbs and spices,19A,herb,"Field crop, high acreage"
+Peanut,99,no group name,NA,no subgroup,"Field crop, high acreage"
+Potato,1,"vegetable, root and tuber",1C,"vegetable, tuberous and corm","Field crop, high acreage"
+Rice,15,"grain, cereal",NA,no subgroup,"Field crop, high acreage"
+Safflower,20,oilseed,20B,sunflower,"Field crop, high acreage"
+"Sorghum, grain",17,"grass, forage, fodder and hay",NA,no subgroup,"Field crop, high acreage"
+Soybean,7,"vegetable, foliage of legume",NA,no subgroup,"Field crop, high acreage"
+Sugarcane,99,no group name,NA,no subgroup,"Field crop, high acreage"
+Sunflower,20,oilseed,20B,sunflower,"Field crop, high acreage"
+"Wheat, spring",15,"grain, cereal",NA,no subgroup,"Field crop, high acreage"
+"Wheat, winter",15,"grain, cereal",NA,no subgroup,"Field crop, high acreage"
+Dill,19,herbs and spices,19B,spice,"Field crop, high acreage"
+"Artichoke, globe",99,no group name,NA,no subgroup,"Field crop, typical"
+Asparagus,99,no group name,NA,no subgroup,"Field crop, typical"
+"Bean, snap",6,"vegetable, legume",6A,"vegetable, legume, edible, podded","Field crop, typical"
+"Beet, garden",1,"vegetable, root and tuber",1A,"vegetable, root","Field crop, typical"
+"Blueberry, lowbush",13-07,"fruit, berry and small fruit",13-07B,bushberry,"Field crop, typical"
+Broccoli,5,"vegetable, brassica leafy",5A,"brassica, head and stem","Field crop, typical"
+Brussels Sprouts,5,"vegetable, brassica leafy",5A,"brassica, head and stem","Field crop, typical"
+Cabbage,5,"vegetable, brassica leafy",5A,"brassica, head and stem","Field crop, typical"
+"Cabbage, chinese, Bok choy",5,"vegetable, brassica leafy",5B,"brassica, leafy greens","Field crop, typical"
+"Cabbage, chinese, Napa",5,"vegetable, brassica leafy",5A,"brassica, head and stem","Field crop, typical"
+Cantaloupe,9,"vegetable, cucurbit",9A,melon,"Field crop, typical"
+Carrot,1,"vegetable, root and tuber",1B,"vegetable, root (except sugar beet)","Field crop, typical"
+Cauliflower,5,"vegetable, brassica leafy",5A,"brassica, head and stem","Field crop, typical"
+Celery,4,"vegetable, leafy, except brassica",4B,leaf petiole,"Field crop, typical"
+Chickpea,6,"vegetable, legume",6C,"pea and bean, dried shelled, except soybean","Field crop, typical"
+Collards,5,"vegetable, brassica leafy",5B,"brassica, leafy greens","Field crop, typical"
+"Corn, sweet, grain",15,"grain, cereal",NA,no subgroup,"Field crop, typical"
+"Corn, sweet, processing",15,"grain, cereal",NA,no subgroup,"Field crop, typical"
+Cranberry,13-07,"fruit, berry and small fruit",13-07H,"berry, low growing, except strawberry","Field crop, typical"
+Cucumber,9,"vegetable, cucurbit",9B,squash/cucumber,"Field crop, typical"
+Eggplant,10-Aug,"vegetable, fruiting",8-10B,pepper/eggplant,"Field crop, typical"
+Gourd,9,"vegetable, cucurbit",9B,squash/cucumber,"Field crop, typical"
+"Greens, leafy",4,"vegetable, leafy, except brassica",4A,leafy greens,"Field crop, typical"
+Kale,5,"vegetable, brassica leafy",5B,"brassica, leafy greens","Field crop, typical"
+"Lettuce, leaf",4,"vegetable, leafy, except brassica",4A,leafy greens,"Field crop, typical"
+Mustard Green,5,"vegetable, brassica leafy",5B,"brassica, leafy greens","Field crop, typical"
+Okra,10-Aug,"vegetable, fruiting",8-10B,pepper/eggplant,"Field crop, typical"
+"Onion, bulb",7-Mar,"vegetable, bulb",3-07A,"onion, bulb","Field crop, typical"
+"Onion, green",7-Mar,"vegetable, bulb",3-07B,"onion, green","Field crop, typical"
+Parsley,4,"vegetable, leafy, except brassica",4A,leafy greens,"Field crop, typical"
+"Pea, Green",6,"vegetable, legume",6A,"vegetable, legume, edible, podded","Field crop, typical"
+"Pepper, bell",10-Aug,"vegetable, fruiting",8-10B,pepper/eggplant,"Field crop, typical"
+"Pepper, chili",10-Aug,"vegetable, fruiting",8-10B,pepper/eggplant,"Field crop, typical"
+Pineapple,99,no group name,NA,no subgroup,"Field crop, typical"
+"Potato, Sweet",1,"vegetable, root and tuber",1D,"vegetable, tuberous and corm, except potato","Field crop, typical"
+Pumpkin,9,"vegetable, cucurbit",9B,squash/cucumber,"Field crop, typical"
+Spinach,4,"vegetable, leafy, except brassica",4A,leafy greens,"Field crop, typical"
+"Squash, summer",9,"vegetable, cucurbit",9B,squash/cucumber,"Field crop, typical"
+"Squash, winter",9,"vegetable, cucurbit",9B,squash/cucumber,"Field crop, typical"
+Strawberry,13-07,"fruit, berry and small fruit",13-07G,"berry, low growing","Field crop, typical"
+Swiss Chard,4,"vegetable, leafy, except brassica",4B,leaf petiole,"Field crop, typical"
+Tobacco,NA,no crop group,NA,no subgroup,"Field crop, typical"
+Tomato,10-Aug,"vegetable, fruiting",8-10A,tomato,"Field crop, typical"
+"Tomato, processing",10-Aug,"vegetable, fruiting",8-10A,tomato,"Field crop, typical"
+Turnip,1,"vegetable, root and tuber",1A,"vegetable, root","Field crop, typical"
+Watercress,99,no group name,NA,no subgroup,"Field crop, typical"
+Watermelon,9,"vegetable, cucurbit",9A,melon,"Field crop, typical"
+Forestry,NA,no crop group,NA,no subgroup,Forestry
+"Golf course (fairways, tees, greens)",NA,no crop group,NA,no subgroup,"Golf course (fairways, tees, greens)"
+Golf course (tees and greens only),NA,no crop group,NA,no subgroup,Golf course (tees and greens only)
+Floriculture Crop,NA,no crop group,NA,no subgroup,Greenhouse
+Greenhouse vegetable,NA,no crop group,NA,no subgroup,Greenhouse
+"Greenhouse Crop (Ornamentals, Non-bearing Plants)",NA,no crop group,NA,no subgroup,Greenhouse
+"Nursery Crop (Ornamentals, Non-bearing Plants)",NA,no crop group,NA,no subgroup,Nursery
+Almond,14,#N/A,NA,no subgroup,Orchard/Vineyard
+Apple,10-Nov,"fruit, pome",NA,no subgroup,Orchard/Vineyard
+Apricot,12-Dec,"fruit, stone",12-12B,peach,Orchard/Vineyard
+Avocado,99,no group name,NA,no subgroup,Orchard/Vineyard
+Banana,99,no group name,NA,no subgroup,Orchard/Vineyard
+Blackberry,13-07,"fruit, berry and small fruit",13-07A,caneberry,Orchard/Vineyard
+"Blueberry, highbush",13-07,"fruit, berry and small fruit",13-07B,bushberry,Orchard/Vineyard
+Cherry,12-Dec,"fruit, stone",12-12A,cherry,Orchard/Vineyard
+Christmas tree,NA,no crop group,NA,no subgroup,Orchard/Vineyard
+Date,99,no group name,NA,no subgroup,Orchard/Vineyard
+Fig,99,no group name,NA,no subgroup,Orchard/Vineyard
+"Grape, wine",13-07,"fruit, berry and small fruit",13-07F,"fruit, small vine climbing, except fuzzy kiwifruit",Orchard/Vineyard
+"Grape, juice",13-07,"fruit, berry and small fruit",13-07F,"fruit, small vine climbing, except fuzzy kiwifruit",Orchard/Vineyard
+"Grape, table",13-07,"fruit, berry and small fruit",13-07F,"fruit, small vine climbing, except fuzzy kiwifruit",Orchard/Vineyard
+"Grape, raisin",13-07,"fruit, berry and small fruit",13-07F,"fruit, small vine climbing, except fuzzy kiwifruit",Orchard/Vineyard
+Grapefruit,10-Oct,"fruit, citrus",10-10C,grapefruit,Orchard/Vineyard
+Hazelnut,14-12,"nut, tree",NA,no subgroup,Orchard/Vineyard
+Hop,99,no group name,NA,no subgroup,Orchard/Vineyard
+Kiwifruit,13-07,"fruit, berry and small fruit",13-07E,"fruit, small vine climbing, except grape",Orchard/Vineyard
+Lemon,10-Oct,"fruit, citrus",10-10B,lemon/lime,Orchard/Vineyard
+Macadamia nut,14-12,"nut, tree",NA,no subgroup,Orchard/Vineyard
+Mango,99,no group name,NA,no subgroup,Orchard/Vineyard
+Nectarine,12-Dec,"fruit, stone",12-12B,peach,Orchard/Vineyard
+Olive,99,no group name,NA,no subgroup,Orchard/Vineyard
+Orange,10-Oct,"fruit, citrus",10-10A,orange,Orchard/Vineyard
+Papaya,99,no group name,NA,no subgroup,Orchard/Vineyard
+Peach,12-Dec,"fruit, stone",12-12B,peach,Orchard/Vineyard
+Pear,10-Nov,"fruit, pome",NA,no subgroup,Orchard/Vineyard
+Pecan,14-12,"nut, tree",NA,no subgroup,Orchard/Vineyard
+Pistachio,14-12,"nut, tree",NA,no subgroup,Orchard/Vineyard
+"Plum, prune",12-Dec,"fruit, stone",12-12C,plum,Orchard/Vineyard
+Pomegranate,99,no group name,NA,no subgroup,Orchard/Vineyard
+Raspberry,13-07,"fruit, berry and small fruit",13-07A,caneberry,Orchard/Vineyard
+Walnut,14-12,"nut, tree",NA,no subgroup,Orchard/Vineyard
+Sod,NA,no crop group,NA,no subgroup,Sod
