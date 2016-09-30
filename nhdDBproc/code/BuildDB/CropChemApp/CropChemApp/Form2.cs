@@ -14,8 +14,13 @@ namespace CropChemApp
 {
     public partial class Form2 : Form
     {
-        private string dbFile = "PISCESAttributes.db";
+        //private string dbFile = "PISCESAttributes.db";
+        private string dbFile = "NHDPlusv2Attributes.db";
 
+        //utility reads user-selected csv/dbf nhdplusv2 attribute files (currently precip, elevslope, DA, sfVelocity) and
+        //  1 - sequentially creates and/or appends pertinent data to csv files on disk 
+        //  2 - as an intermediate step, sequentially reads those csv files back into memory prior to
+        //  3 - sequentially creating sqlite data tables in the piscesattribute db
         public Form2()
         {
             InitializeComponent();
@@ -26,10 +31,10 @@ namespace CropChemApp
         {
             //create the db
             //string dbFile = "PISCESAttributes.s3db";
-            //if (File.Exists(dbFile))
-            //    File.Delete(dbFile);
+            if (File.Exists(dbFile))
+                File.Delete(dbFile);
 
-            if (!File.Exists(dbFile))
+            if (File.Exists(dbFile))
                 SQLiteConnection.CreateFile(dbFile);
         }
 
