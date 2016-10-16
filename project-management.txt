@@ -1,0 +1,8 @@
+Sprints last a week, Monday-Friday for a selected github repository.
+
+We are using github issues and project to manage backlogs and sprints.
+
+Github issues are created with user_story, new, in_progress, ready_for_test and closed
+fields as in taiga.
+
+
