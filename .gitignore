@@ -1,3 +1,5 @@
+*.exe
+*.dll
 .DS_Store
 *.pyc
 *.bak
@@ -26,3 +28,6 @@ build/*
 *.mod
 fort.*
 *.pid
+pisces/idea/*
+
+
