@@ -28,6 +28,6 @@ build/*
 *.mod
 fort.*
 *.pid
-pisces/idea/*
+pisces/.idea/*
 
 
