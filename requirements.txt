@@ -1,2 +1,2 @@
-Flask
-flask_restful
+flask
+flask-restful
