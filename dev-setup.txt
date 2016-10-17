@@ -1,0 +1,24 @@
+#requires python 3
+python3 -V
+python3
+>import sys
+>sys.prefix
+>import site
+>site.getsitepackages()
+
+#setup requires pip3 and pyvenv which are preinstalled with python 3.4+
+
+#create virtualenv if you do not have one
+
+
+#clone from git from parent of where you want to have source
+git clone https://github.com/USEPA/PiSCES.git
+git checkout current_dev_branch
+
+#run from command line from pisces root
+#install python dependencies
+pip3 install requirements.txt
+
+#run flask app
+export FLASK_APP=piscesapp.py #first time only
+flask run
