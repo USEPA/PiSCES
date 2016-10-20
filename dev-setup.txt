@@ -52,3 +52,13 @@ python3
 >sys.executable
 >import site
 >site.getsitepackages()
+
+### DB setup ###
+
+Sql/Spatial-Lite db files found here: O:\PRIV\WEB\PiSCES\Databases
+Copy all 3 files to your dev environment <dev-location>\sqlitemgr
+
+#Optional db exploration on MS systems
+A nice db browsing tool is here: http://sqlitebrowser.org/
+You can open the sqlite attribute DBs (fish species/properties and NHD stream attributes) with this tool
+Queries can be made of NHDPlusv2Attributes.db and PISCES.sqlite
