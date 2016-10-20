@@ -25,7 +25,7 @@ git checkout current_dev_branch
 #activate the virtual environment from the repo directory
 ./env/Scripts/activate
 #and then
-pip install flask-restful
+pip install flask-restful sphinx
 
 #run from pycharm by clicking the green arrow in the title bar nest
 #to the PiSCES icon
