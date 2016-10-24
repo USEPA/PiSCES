@@ -9,7 +9,7 @@ api = Api(app)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('pisces.html')
+    return render_template('index.html')
 
 class fishhucs(Resource):
     def get(self, hucid):
