@@ -9,15 +9,18 @@
 
     <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"</script>
+    <link rel="stylesheet" href=https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css />
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
 
     <script src="static/Scripts/huc250k_4326.js"></script>
     <script src="static/Scripts/waterslayer.js"></script>
     <script src="static/Scripts/leafletmap.js"></script>
-    <script src="static/Scripts/pisces.js"></script>
+    <script src="static/Scripts/pisces_datatable.js"></script>
+    <!--script src="static/Scripts/pisces.js"></script -->
     <style>
         #map {
-            height: 95%;
+            height: 65%;
         }
 
         .legend {
@@ -34,12 +37,12 @@
     </style>
     <script>
         $(document).ready(function () {
-            //
-            //Start pKa stuff
-            //
+
             $("#selectHUC").on('change', function () {
                 selectHUCs(this.value);
             });
+
+            //initDT(fish_by_huc_columns, null);
         });
     </script>
 </head>
@@ -60,6 +63,12 @@
                 <div id="map"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table id="fish_data_table" class="display" cellspacing="0" width="90%">
+                </table>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -77,7 +86,7 @@
             onEachFeature: onEachFeature
         }).addTo(map);
 
-        L.control.layers(basemaps).addTo(map);
+        //L.control.layers(basemaps).addTo(map);
 
         //function onEachFeature(feature, layer) {
         //    // does this feature have a property named popupContent?
