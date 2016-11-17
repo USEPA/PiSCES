@@ -1,5 +1,8 @@
+import copy
 from pisces.sqlitemgr import sqlite_mgr
 from pisces.sqlitemgr import spatialite_mgr
+import requests
+
 import logging
 import sys
 
@@ -66,10 +69,72 @@ def get_fish_range_by_species(specieIDs):
 
 def is_point_in_polygon(x, y, include_headers=None):
     """
-
     :param x:
     :param y:
     :param include_headers:
     :return:
     """
     pointInPolygon = spatialite_mgr.point_in_polygon_query(x,y,include_headers)
+
+
+#
+#
+#These structures and functions are for the second stream segment based fish community generation
+#
+#
+basePtIndexingUrl = "https://ofmpub.epa.gov/waters10/PointIndexing.Service"
+point = 'POINT({0} {1})'
+
+ptIndexParams = {
+     "pGeometry"               : ""
+    ,"pGeometryMod"            : "WKT,SRSNAME=urn:ogc:def:crs:OGC::CRS84"
+    ,"pPointIndexingMethod"    : "DISTANCE"
+    ,"pPointIndexingMaxDist"   :  25
+    ,"pOutputPathFlag"         : "TRUE"
+    ,"pReturnFlowlineGeomFlag" : "FALSE"
+    ,"optOutCS"                : "SRSNAME=urn:ogc:def:crs:OGC::CRS84"
+    ,"optOutPrettyPrint"       : 0
+    }
+
+streamSegGeoJSON = {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [125.6, 10.1]
+                },
+                "properties": {"name":""}
+            }
+
+
+def getStreamSegmentID(latitude, longitude):
+    """
+    :param latitude:
+    :param longitude:
+    :return: NHDPlus stream segment ID (COMID)
+    """
+    params = copy.copy(ptIndexParams)
+    params["pGeometry"] = point.format(longitude, latitude)
+    resp = requests.post(basePtIndexingUrl, data=params)
+
+
+def getStreamSegmentShape(latitude, longitude):
+    """
+    :param latitude:
+    :param longitude:
+    :return:
+    """
+
+    params = copy.copy(ptIndexParams)
+    params["pGeometry"] = point.format(longitude, latitude)
+    params["pReturnFlowlineGeomFlag"] = "TRUE"
+    response = requests.post(basePtIndexingUrl, data=params)
+    results = response.json()
+
+    streamSeg = copy.copy(streamSegGeoJSON)
+    comid = results["output"]["ary_flowlines"][0]["comid"]
+    geometry = results["output"]["ary_flowlines"][0]["shape"]
+
+    streamSeg["geometry"] = geometry
+    streamSeg["properties"]["name"] = comid
+
+    return streamSeg

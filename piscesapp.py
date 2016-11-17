@@ -9,7 +9,7 @@ api = Api(app)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('pisces.html')
+    return render_template('pisces2.html')
 
 class fishhucs(Resource):
     def get(self, hucid):
@@ -23,8 +23,20 @@ class fishRangeBySpecies(Resource):
         species.append(speciesid)
         return pisces_api.get_fish_range_by_species(species)
 
+class getStreamSegmentID(Resource):
+    def get(self, latitude, longitude):
+        return pisces_api.getStreamSegmentShape(latitude, longitude)
+
+class getStreamSegmentShape(Resource):
+    def post(self):
+        data = request.get_json(force=True)
+        latitude  = data["latitude"]
+        longitude = data["longitude"]
+        return pisces_api.getStreamSegmentShape(latitude, longitude)
+
 api.add_resource(fishhucs, '/fishhucs/<string:hucid>')
 api.add_resource(fishRangeBySpecies, '/fishrange/<string:speciesid>')
+api.add_resource(getStreamSegmentShape, '/streamsegment')
 
 if __name__ == '__main__':
     import argparse
