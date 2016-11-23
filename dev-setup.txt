@@ -19,7 +19,16 @@ git checkout current_dev_branch
 #pycharm should also have been installed with elevated priviliges
 #open project in pycharm
 
-#5) in pycharm, select the python 3.5 interpreter
+#5) update the .condarc file that accesses conda package managers
+#@ located in C:\Users\lan___id\
+#edit with a text editor and use this (or something better):
+channels:
+  - https://repo.continuum.io/pkgs/msys2/win-64/
+  - https://repo.continuum.io/pkgs/free/win-64/
+  - https://repo.continuum.io/pkgs/pro/win-64/
+  - defaults
+
+#6) in pycharm, select the python 3.5 interpreter
 #(cygwin python interpreters not supported)
 #setup requires pip3 and pyvenv which are preinstalled with python 3.4+
 #find the interpreter selection menu to see pycharm choices of python interpreters that are installed on
@@ -27,47 +36,49 @@ git checkout current_dev_branch
 #with Project:Pisces select; Files-> Settings ->Project-PiSCES ->Project Interpreter
 #select the anaconda version of python 3.5.x as the choice
 
-#6) create a virtual python interpreter environment
+#7) create a virtual python interpreter environment
 #this can be done from pycharm
 #with Project:Pisces select; Files-> Settings ->Project-PiSCES ->Project Interpretor
 #select conda env (also possible with virtualenv) from the small gear to the right
 #create in an /env subdirectory under where you cloned the repo
 #this directory (/env) is already git ignored in the repo
 
-#7) installing the python package dependencies
+#8) installing the python package dependencies
 #flask-restful may be a pain to install on windows with anaconda
 
-#7a)to see configuration and conda channels available
+#8a)to see configuration and conda channels available
 conda info #(from shell)
 conda list
 
-#7b) try to conda install packages in pycharm on windows
+#8b) try to conda install packages in pycharm on windows
 #mostly a fail at the moment
 #there are 3 requirements currently, flask will work but the other 2 will fail
 
-#7c) you may need to use a command line editor to configure dependencies for conda env
+#8c) you may need to use a command line editor to configure dependencies for conda env
 #conda, pip, virtualenv translator
 #http://conda.pydata.org/docs/_downloads/conda-pip-virtualenv-translator.html
 #for a conda env you may have to use the command line and
 #activate the virtual environment from the repo directory
 ./env/Scripts/activate
 
-#7d) install sphinx from the command line in the conda env
+#8d) install sphinx from the command line in the conda env
 conda install sphinx
 
-#7e) install flask-restful from the command line in the conda env
+#8e) install flask-restful from the command line in the conda env
 #flask-restful is not found by default on conda
 anaconda search -t conda flask-restful
 conda install -c axiom-data-science flask-restful=0.3.5
 
-#8) pycharm will not automatically recognize the changes in the conda env
+#9) pycharm will not automatically recognize the changes in the conda env
 #so you may have to restart pycharm/reset the conda env in pycharm
 
-#9) run from pycharm by clicking the green arrow in the title bar nest
+#10) run from pycharm by clicking the green arrow in the title bar nest
 #to the PiSCES icon, this runs piscesapp.py
 
-#10) you can then visit your browser in (for example):
+#11) you can then visit your browser in (for example):
 http://127.0.0.1:5000/
+
+==============
 
 #run flask app at the command line?? not sure if needed for pycharm
 export FLASK_APP=piscesapp.py #first time only
