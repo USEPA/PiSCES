@@ -25,12 +25,27 @@ git checkout current_dev_branch
 #create in /env directory under where you cloned the repo
 #this directory is already git ignored in the repo
 
+#to see configuration and conda channels available
+conda info #(from shell)
+conda list
+
 #run configuration addition for conda env
 #for a conda env you may have to use the command line and
 #activate the virtual environment from the repo directory
 ./env/Scripts/activate
-#and then
-pip install flask-restful sphinx
+
+#conda, pip, virtualenv translator
+#http://conda.pydata.org/docs/_downloads/conda-pip-virtualenv-translator.html
+
+conda install sphinx
+
+#flask-restful not on conda
+anaconda search -t conda flask-restful
+conda install -c axiom-data-science flask-restful=0.3.5
+
+anaconda search -t conda flask-restful
+
+
 
 #run from pycharm by clicking the green arrow in the title bar nest
 #to the PiSCES icon
