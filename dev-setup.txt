@@ -1,61 +1,77 @@
-#requires python 3
+#1) Requires python 3, you can install via anaconda
 # install python 3.5.x via anaconda at https://www.continuum.io/downloads
-# location @ C:\Users\lan___id\AppData\Local\Continuum\Anaconda3
+# be sure to install anaconda with elevated privileges on an epa machine!
+# location to install:
+#@ C:\Users\lan___id\AppData\Local\Continuum\Anaconda3
 
+#2) on a windows machine you may also want to install git-scm (or use powershell)
 #command line git commands install git-scm
 #https://git-scm.com/downloads
 
+#3) clone the repository
 #clone from git from parent of where you want to have source
 #you may want to use your elevated privileges to create a git directory on
 #the root drive of your machine, for example c:\git
 git clone https://github.com/USEPA/PiSCES.git
 git checkout current_dev_branch
 
+#4) we are using pycharm as the ide
+#pycharm should also have been installed with elevated priviliges
 #open project in pycharm
 
-#select python 3.5 in pycharm (cygwin python interpreters not supported)
+#5) in pycharm, select the python 3.5 interpreter
+#(cygwin python interpreters not supported)
 #setup requires pip3 and pyvenv which are preinstalled with python 3.4+
-#interpreter to see pycharm choices
-#with Project:Pisces select; Files-> Settings ->Project-PiSCES ->Project Interpretor
+#find the interpreter selection menu to see pycharm choices of python interpreters that are installed on
+#your machine
+#with Project:Pisces select; Files-> Settings ->Project-PiSCES ->Project Interpreter
+#select the anaconda version of python 3.5.x as the choice
 
-#create virtualenv if you do not have one
-#also can be done from pycharm
+#6) create a virtual python interpreter environment
+#this can be done from pycharm
 #with Project:Pisces select; Files-> Settings ->Project-PiSCES ->Project Interpretor
-#select conda env or virtualenv
-#create in /env directory under where you cloned the repo
-#this directory is already git ignored in the repo
+#select conda env (also possible with virtualenv) from the small gear to the right
+#create in an /env subdirectory under where you cloned the repo
+#this directory (/env) is already git ignored in the repo
 
-#to see configuration and conda channels available
+#7) installing the python package dependencies
+#flask-restful may be a pain to install on windows with anaconda
+
+#7a)to see configuration and conda channels available
 conda info #(from shell)
 conda list
 
-#run configuration addition for conda env
+#7b) try to conda install packages in pycharm on windows
+#mostly a fail at the moment
+#there are 3 requirements currently, flask will work but the other 2 will fail
+
+#7c) you may need to use a command line editor to configure dependencies for conda env
+#conda, pip, virtualenv translator
+#http://conda.pydata.org/docs/_downloads/conda-pip-virtualenv-translator.html
 #for a conda env you may have to use the command line and
 #activate the virtual environment from the repo directory
 ./env/Scripts/activate
 
-#conda, pip, virtualenv translator
-#http://conda.pydata.org/docs/_downloads/conda-pip-virtualenv-translator.html
-
+#7d) install sphinx from the command line in the conda env
 conda install sphinx
 
-#flask-restful not on conda
+#7e) install flask-restful from the command line in the conda env
+#flask-restful is not found by default on conda
 anaconda search -t conda flask-restful
 conda install -c axiom-data-science flask-restful=0.3.5
 
-anaconda search -t conda flask-restful
+#8) pycharm will not automatically recognize the changes in the conda env
+#so you may have to restart pycharm/reset the conda env in pycharm
 
+#9) run from pycharm by clicking the green arrow in the title bar nest
+#to the PiSCES icon, this runs piscesapp.py
 
+#10) you can then visit your browser in (for example):
+http://127.0.0.1:5000/
 
-#run from pycharm by clicking the green arrow in the title bar nest
-#to the PiSCES icon
-
-#run flask app at the command line
+#run flask app at the command line?? not sure if needed for pycharm
 export FLASK_APP=piscesapp.py #first time only
 flask run
-
-#you can then visit your browser in (for example):
-http://127.0.0.1:5000/
 
 ### DB setup ###
 #Sql/Spatial-Lite db files found here: O:\PRIV\WEB\PiSCES\Databases
