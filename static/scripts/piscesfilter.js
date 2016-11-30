@@ -12,7 +12,7 @@ map.on('click', onMapClick);
 
 function getStreamSegShape(lat, lng)
 {
-    var url = "http://127.0.0.1:5000/streamsegment";
+    var url = "/streamsegment";
     var latLngData = {"latitude": lat.toString(), "longitude":lng.toString()};
     var sLatLngData = JSON.stringify(latLngData);
     //alert(sLatLngData);

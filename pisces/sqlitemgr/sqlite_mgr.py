@@ -16,7 +16,9 @@ def execute_select_query(query, include_headers=None):
     curpath = inspect.getfile(inspect.currentframe())
 
     location = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
     database = os.path.join(location, 'pisces.sqlite')
+    print('Pisces.sqlite location:' + database)
 
     try:
         #currDir = os.getcwd()
@@ -28,6 +30,7 @@ def execute_select_query(query, include_headers=None):
         #os.chdir(currDir)
     except sqlite3.Error as e:
         msg = e.args[0]
+        print('Exception in execute_select_query: ' + msg)
         raise
 
     table = []    

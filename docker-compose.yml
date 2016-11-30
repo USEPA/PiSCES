@@ -1,0 +1,14 @@
+ version: '2'
+ services:
+  pisces:
+    build: .
+    expose:
+    - "8080"
+  nginx:
+#    restart: always
+    image: funkswing/nginx-uwsgi-python
+    ports:
+    - "80:80"
+    - "443:443"
+    links:  # Same as depends_on pisces, but also sets the hostname at which this service can reach the linked service
+    - pisces:uwsgi  # Nginx.conf can reference "pisces" service with the hostname 'uwsgi' or 'pisces'

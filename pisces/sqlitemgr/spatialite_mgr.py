@@ -28,7 +28,12 @@ def point_in_polygon_query(x, y, include_headers=None):
         conn.enable_load_extension(True)
         cursor = conn.cursor()
 
-        cursor.execute("SELECT load_extension('mod_spatialite')")
+        osName = os.name
+        print('OS Name=' + osName)
+        if (osName == 'posix'):
+            cursor.execute("SELECT load_extension('libspatialite.so')")
+        else:
+            cursor.execute("SELECT load_extension('mod_spatialite')")
 
         os.chdir(currentDir)
 

@@ -6,10 +6,17 @@ from pisces import pisces_api
 app = Flask(__name__)
 api = Api(app)
 
+@app.route('/pisces')
+def pisces():
+    return render_template('pisces.html')
+
+@app.route('/pisces2')
+def pisces2():
+    return render_template('pisces2.html')
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('pisces2.html')
+    return render_template('pisces.html')
 
 class fishhucs(Resource):
     def get(self, hucid):
