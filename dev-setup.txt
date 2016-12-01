@@ -25,6 +25,10 @@ git checkout current_dev_branch
 #create in /env directory under where you cloned the repo
 #this directory is already git ignored in the repo
 
+#To develop and debug on a Windows box, download the Spatialite binaries from:
+#http://www.gaia-gis.it/gaia-sins/windows-bin-amd64/mod_spatialite-4.3.0a-win-amd64.7z
+#The binaries need to be in your path.  You can put them in the pisces/sqlitemgr folder
+
 #run configuration addition for conda env
 #for a conda env you may have to use the command line and
 #activate the virtual environment from the repo directory
