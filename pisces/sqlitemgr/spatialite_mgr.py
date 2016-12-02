@@ -2,14 +2,14 @@ import sqlite3
 import sys
 import os
 
-def point_in_polygon_query(x, y, include_headers=None):
+def getEcoRegion(x, y, include_headers=None):
     """
     Generic sqlite3 select database query
 
     Arg1: x coord (longitude in decimal)
     Arg2: y coord (latitude in decimal)
 
-    Returns: list of records for polygons containing point      
+    Returns: list of records for EcoRegions that contain point
     """
 
     location = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -50,7 +50,6 @@ def point_in_polygon_query(x, y, include_headers=None):
     if  include_headers == True:
         headers = list(map(lambda x: x[0], cursor.description))
         table.append(headers)
-        #names2 = [description[0] for description in cursor.description]
     
     for row in rows:
         table.append(row)

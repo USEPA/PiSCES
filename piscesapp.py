@@ -41,9 +41,19 @@ class getStreamSegmentShape(Resource):
         longitude = data["longitude"]
         return pisces_api.getStreamSegmentShape(latitude, longitude)
 
+class getEcoRegionFromLngLat(Resource):
+    def post(self):
+        data = request.get_json(force=True)
+        latitude  = data["latitude"]
+        longitude = data["longitude"]
+        return pisces_api.getEcoRegionFromLngLat(longitude, latitude)
+
+
+
 api.add_resource(fishhucs, '/fishhucs/<string:hucid>')
 api.add_resource(fishRangeBySpecies, '/fishrange/<string:speciesid>')
 api.add_resource(getStreamSegmentShape, '/streamsegment')
+api.add_resource(getEcoRegionFromLngLat, '/ecoregion')
 
 if __name__ == '__main__':
     import argparse

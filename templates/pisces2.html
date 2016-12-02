@@ -37,8 +37,6 @@
             $("#selectHUC").on('change', function () {
                 selectHUCs(this.value);
             });
-
-            //initDT(fish_by_huc_columns, null);
         });
     </script>
 </head>
@@ -55,13 +53,29 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table id="fish_data_table" class="display" cellspacing="0" width="90%">
+                <table id="fish_data_table" class="display" cellspacing="0" width="40%">
+                    <tr>
+                        <td>Latitude:</td>
+                        <td id="latVal">0.00</td>
+                        <td>Longitude:</td>
+                        <td id="lngVal">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>EcoRegion ID:</td>
+                        <td id="ecoRegionId">0</td>
+                        <td>EcoRegion Name:</td>
+                        <td id="ecoRegionName"></td>
+                    </tr>
+                    <td>
+                        <tr><button onclick="getEcoRegion()">Get EcoRegion</button></tr>
+                    </td>
                 </table>
             </div>
         </div>
     </div>
 
     <script>
+
         // initialize the map
         var map = L.map('map').setView([33.95, -83.38], 8);
 

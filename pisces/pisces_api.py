@@ -67,16 +67,6 @@ def get_fish_range_by_species(specieIDs):
     data = sqlite_mgr.execute_select_query(query, True)
     return data
 
-def is_point_in_polygon(x, y, include_headers=None):
-    """
-    :param x:
-    :param y:
-    :param include_headers:
-    :return:
-    """
-    pointInPolygon = spatialite_mgr.point_in_polygon_query(x,y,include_headers)
-
-
 #
 #
 #These structures and functions are for the second stream segment based fish community generation
@@ -124,6 +114,7 @@ def getStreamSegmentShape(latitude, longitude):
     :return:
     """
 
+    dataTable = getEcoRegionFromLngLat(longitude, latitude)
     params = copy.copy(ptIndexParams)
     params["pGeometry"] = point.format(longitude, latitude)
     params["pReturnFlowlineGeomFlag"] = "TRUE"
@@ -138,3 +129,19 @@ def getStreamSegmentShape(latitude, longitude):
     streamSeg["properties"]["name"] = comid
 
     return streamSeg
+
+
+def getEcoRegionFromLngLat(x, y, include_headers=None):
+    """
+    :param x:
+    :param y:
+    :param include_headers:
+    :return:
+    """
+    data = spatialite_mgr.getEcoRegion(x,y)
+    id = data[0][0]
+    name = data[0][1]
+    ecoRegion = {'id':data[0][0], 'name':data[0][1]}
+    er2 = ecoRegion
+    return ecoRegion
+
