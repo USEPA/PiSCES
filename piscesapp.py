@@ -8,7 +8,7 @@ api = Api(app)
 
 @app.route('/pisces')
 def pisces():
-    return render_template('pisces.html')
+    return render_template('test.html')
 
 @app.route('/pisces2')
 def pisces2():
@@ -16,7 +16,7 @@ def pisces2():
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('pisces.html')
+    return render_template('test.html')
 
 class fishhucs(Resource):
     def get(self, hucid):
