@@ -107,3 +107,14 @@ function attachTableClickEventHandlers(){
             console.log("Row_num =" + row_cell + "  ,  column_num ="+ col_cell );
     });
 };
+
+
+//trying to add "download data" button. issue with jquery version?
+// $(document).ready(function() {
+//     $('#fish_data_table').DataTable( {
+//         dom: 'Bfrtip',
+//         buttons: [
+//             'copy', 'csv', 'excel', 'pdf', 'print'
+//         ]
+//     } );
+// } );
