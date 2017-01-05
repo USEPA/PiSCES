@@ -1,4 +1,5 @@
 # PiSCES : Pi(scine) Stream Community Estimation System		
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/1bf18efe1d674a298d13e036c5f612c5/badge.svg)](https://www.quantifiedcode.com/app/project/1bf18efe1d674a298d13e036c5f612c5)
  -The Piscine Stream Community Estimation System (PiSCES) provides users with a reasonable fish community 
  for any stream reach in the conterminous United States. PiSCES utilizes distributional information obtained 
  from Nature Serve, the USGS, and the Peterson Field Guide to Freshwater Fishes of North America for over 
